@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>HTML form</title>
+	<link rel="stylesheet" type="text/css" href="/proxima-nova-web-fonts-master/fonts/fonts.css" />
+	<style>
+		body {
+			font-family: 'Proxima Nova', Georgia, sans-serif;
+		}
+	</style>
+</head>
+<body>
+	<form action="#" method="post">
+		<fieldset>
+    <legend>Fruit juice size</legend>
+    <p>
+      <label for="size_1">
+      	      <input type="radio" name="size" id="size_1" value="small">Small
+      </label>
+    </p>
+    <p>
+      
+      <label for="size_2"><input type="radio" name="size" id="size_2" value="medium">Medium</label>
+    </p>
+    <p>
+      <label for="size_3"><input type="radio" name="size" id="size_3" value="large">Large
+</label>
+    </p>
+    <p>
+    <label for="taste_1">I like cherry</label>
+    <input type="checkbox" id="taste_1" name="taste_cherry" value="1">
+  </p>
+  <p>
+    <label for="taste_2">I like banana</label>
+    <input type="checkbox" id="taste_2" name="taste_banana" value="2">
+  </p>
+  <div>
+  <label for="username">Name: <abbr title="required">*</abbr></label>
+  <input id="username" type="text" name="username">
+</div>
+  </fieldset>
+		<div class="button">
+			<button type="submit">Send your message</button>
+		</div>
+	</form>
+</body>
+</html>
