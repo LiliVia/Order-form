@@ -1,0 +1,15 @@
+.container h3::before {
+	counter-increment: section;
+	content: counter(section);
+	display: inline-block;
+	color: white;
+	background: #555;
+	border: 5px solid #555;
+	padding: 1px 15px;
+	margin-right: 16px;
+	border-radius: 50%;
+}
+
+*:before, *:after {
+	box-sizing: inherit;
+}
