@@ -1,3 +1,7 @@
+.container {
+	counter-reset: section;
+}
+
 .container h3::before {
 	counter-increment: section;
 	content: counter(section);
