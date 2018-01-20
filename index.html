@@ -5,52 +5,135 @@
 	<title>HTML form</title>
 	<link rel="stylesheet" type="text/css" href="/proxima-nova-web-fonts-master/fonts/fonts.css" />
 	<link rel="stylesheet" href="style.css">
-	<style>
-		body {
-			font-family: 'Proxima Nova', Georgia, sans-serif;
-		}
-	</style>
 </head>
 <body>
-	<div class="w3-dark-grey">
+	<main>
+		<nav>
+			<div class="back">Go back</div>
+			<div class="logo"></div>
+			<div class="sign">Sign in</div>
+		</nav>
+		<form action="#">
+			<div class="order-header">
+				<h2>
+				<i class="fa fa-clipboard order-symbol" aria-hidden="true"></i>
+				Your order
+				</h2>
+				<table>
+					<tr>
+						<th>Items</th>
+						<th>Details</th>
+						<th>Price</th>
+						<th>Delivery</th>
+						<tr>
+							<td>2 documents</td>
+							<td>2 languages</td>
+							<td value='USD:696.00'>$ 696.00</td>
+							<td>48 hours*</td>
+						</tr>
+					</tr>
+				</table>
+			</div>
+			<section class="order-section">
+				<div class="left button-to-order">
+					<button>Place order</button>
+					<button>Print a quote</button>
+				</div>
+				<div class="right help-center">
+				<i><mark>add icon</mark></i>
+				<div>
+					<h3>Help center</h3>
+					<p>
+						If you need assistance while placing your order,
+						contact one of our beloved Project Manager by phone or email
+					</p>
+					<address class='address-block'>
+					<a href="tel:+971(0)555 555">+971(0)555 555</a>
+					<a href="mailto:help@qtest.com">help@qtest.com</a>
+					</address>
+				</div>
+			</section>
+			</div>
+			<section class="select-translate-object">
+				<h1>Select what you want to translate</h1>
+				<label for="#" class="select-type">
+					<input type="radio" name="var" value="website" required hidden>
+					<div class="select-wrapper">
+						<img src="img/website.jpg" alt="select-website" class="select-img">
+					</div>
+				</label>
+				<label for="#" class="select-type">
+					<input type="radio" name="var" value="document" required hidden checked>
+					<div class="select-wrapper">
+						<img src="img/document.jpg" alt="select-document" class="select-img">
+					</div>
+				</label>
+				<label for="#" class="select-type">
+					<input type="radio" name="var" value="social-account" required hidden>
+					<div class="select-wrapper">
+						<img src="img/social-account.jpg" alt="select-social-account" class="select-img">
+					</div>
+				</label>
+			</section>
+
+
+
+
+
+
+
+		</form>
+	</main>
+	<footer></footer>
+
+
+
+
+
+
+<!-- this content will be deleted in finished project -->
+	<div class="train_div">
+		<div class="w3-dark-grey">
 <div class="container w3-content w3-green" style="max-width:500px">
-  <h3>Pizza</h3>
-  <h3>Hamburger</h3>
-  <h3>Hotdogs</h3>
+	<h3>Pizza</h3>
+	<h3>Hamburger</h3>
+	<h3>Hotdogs</h3>
 </div>
 </div>
 	<form action="#" method="post">
 		<fieldset>
-    <legend>Fruit juice size</legend>
-    <p>
-      <label for="size_1">
-      	      <input type="radio" name="size" id="size_1" value="small">Small
-      </label>
-    </p>
-    <p>
-      
-      <label for="size_2"><input type="radio" name="size" id="size_2" value="medium">Medium</label>
-    </p>
-    <p>
-      <label for="size_3"><input type="radio" name="size" id="size_3" value="large">Large
+		<legend>Fruit juice size</legend>
+		<p>
+			<label for="size_1">
+							<input type="radio" name="size" id="size_1" value="small">Small
+			</label>
+		</p>
+		<p>
+			
+			<label for="size_2"><input type="radio" name="size" id="size_2" value="medium">Medium</label>
+		</p>
+		<p>
+			<label for="size_3"><input type="radio" name="size" id="size_3" value="large">Large
 </label>
-    </p>
-    <p>
-    <label for="taste_1">I like cherry</label>
-    <input type="checkbox" id="taste_1" name="taste_cherry" value="1">
-  </p>
-  <p>
-    <label for="taste_2">I like banana</label>
-    <input type="checkbox" id="taste_2" name="taste_banana" value="2">
-  </p>
-  <div>
-  <label for="username">Name: <abbr title="required">*</abbr></label>
-  <input id="username" type="text" name="username">
+		</p>
+		<p>
+		<label for="taste_1">I like cherry</label>
+		<input type="checkbox" id="taste_1" name="taste_cherry" value="1">
+	</p>
+	<p>
+		<label for="taste_2">I like banana</label>
+		<input type="checkbox" id="taste_2" name="taste_banana" value="2">
+	</p>
+	<div>
+	<label for="username">Name: <abbr title="required">*</abbr></label>
+	<input id="username" type="text" name="username">
 </div>
-  </fieldset>
+	</fieldset>
 		<div class="button">
 			<button type="submit">Send your message</button>
-		</div>
+		</div
+	>
 	</form>
+	</div>
 </body>
 </html>
