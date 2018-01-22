@@ -17,7 +17,7 @@
 			<a href="#" class="sign">Sign in</a>
 		</nav>
 		<main>
-		<form method="post" enctype="#">
+		<form action="/orders" method="post" enctype="#">
 			<div class="order-header">
 				<h2>
 				<i class="fa fa-clipboard order-symbol" aria-hidden="true"></i>
@@ -40,11 +40,10 @@
 			</div>
 			<section class="order-section">
 				<div class="left button-to-order">
-					<button>Place order</button>
-					<button>Print a quote</button>
+					<button id="place-order">Place order</button>
+					<button id="print-quoter">Print a quote</button>
 				</div>
 				<div class="right help-center">
-				<i><mark>add icon</mark></i>
 				<div>
 					<h3>Help center</h3>
 					<p>
@@ -131,7 +130,7 @@
 				</div>
 			</fieldset>
 			<fieldset class="order-details tone">
-				<h1>Select your desired tone</h1>
+				<h2>Select your desired tone</h2>
 				<label for="#" class="select-tone">
 					<input type="radio" name="var" value="friendly" required hidden>
 					<div class="select-wrapper">
@@ -169,96 +168,56 @@
 				<h2>Sign up and choose a payment method</h2>
 				<p>Already have an account with us?<a href="#">Sign in</a></p>
 				<div class="fullname-client">
-				<label for="">Full name<input type="text" value="Mathieu Mayer"></label>
+				<label>Full name<input type="text" value="Mathieu Mayer"></label>
 				</div>
 				<div class="email-password-client">
-				<label for="">Email adress<input type="text" value="mathieu.mm@me.com"></label>
-				<label for="">Choose a password<input type="password" value="mathieu.mm@me.com"></label>
+				<label>Email adress<input type="text" value="mathieu.mm@me.com"></label>
+				<label>Choose a password<input type="password" value="mathieu.mm@me.com"></label>
 				</div>
 				<div class="pay-method">
-					<label for="#" class="select-pay-method">
+					<label class="select-pay-method">
 						<input type="radio" name="var" value="visa" required hidden>
 						<div class="select-wrapper">
 							<img src="img/visa.jpg" alt="visa" class="select-img">
 						</div>
 					</label>
-					<label for="#" class="select-pay-method">
+					<label class="select-pay-method">
 						<input type="radio" name="var" value="paypal" required hidden>
 						<div class="select-wrapper">
 							<img src="img/paypal.jpg" alt="paypal" class="select-img">
 						</div>
 					</label>
-					<label for="#" class="select-pay-method">
+					<label class="select-pay-method">
 						<input type="radio" name="var" value="amazon" required hidden>
 						<div class="select-wrapper">
 							<img src="img/amazon.jpg" alt="amazon" class="select-img">
 						</div>
 					</label>
 				</div>
-				<div class="card-info">
-					
+				<div class="pay-method__card-info">
+					<label class="card-info-number">
+						Card number
+						<input type="number" name="card-number">
+					</label>
+					<label class="card-info-date">
+						Expiry date
+						<input type="date" name="card-date">
+					</label>
+					<label class="card-info-password">
+						Code
+						<input type="password" name="card-password"></label>
 				</div>
-				
 			</fieldset>
-
-
-
-
-
-
-
 		</form>
+		<section class="agree-order-quoter">
+			<label class="agree-terms">
+				<input type="checkbox" name="agree-terms">
+				I agree to the <a href="#">Terms &amp; Conditions</a>
+			</label>
+			<button for="place-order">Place order</button>
+			<button for="print-quoter">Print a quote</button>
+		</section>
 	</main>
 	<footer></footer>
-
-
-
-
-
-
-<!-- this content will be deleted in finished project -->
-	<div class="train_div">
-		<div class="w3-dark-grey">
-<div class="container w3-content w3-green" style="max-width:500px">
-	<h3>Pizza</h3>
-	<h3>Hamburger</h3>
-	<h3>Hotdogs</h3>
-</div>
-</div>
-	<form action="#" method="post">
-		<fieldset>
-		<legend>Fruit juice size</legend>
-		<p>
-			<label for="size_1">
-							<input type="radio" name="size" id="size_1" value="small">Small
-			</label>
-		</p>
-		<p>
-			
-			<label for="size_2"><input type="radio" name="size" id="size_2" value="medium">Medium</label>
-		</p>
-		<p>
-			<label for="size_3"><input type="radio" name="size" id="size_3" value="large">Large
-</label>
-		</p>
-		<p>
-		<label for="taste_1">I like cherry</label>
-		<input type="checkbox" id="taste_1" name="taste_cherry" value="1">
-	</p>
-	<p>
-		<label for="taste_2">I like banana</label>
-		<input type="checkbox" id="taste_2" name="taste_banana" value="2">
-	</p>
-	<div>
-	<label for="username">Name: <abbr title="required">*</abbr></label>
-	<input id="username" type="text" name="username">
-</div>
-	</fieldset>
-		<div class="button">
-			<button type="submit">Send your message</button>
-		</div
-	>
-	</form>
-	</div>
 </body>
 </html>
