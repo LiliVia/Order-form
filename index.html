@@ -2,17 +2,21 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>HTML form</title>
-	<link rel="stylesheet" type="text/css" href="/proxima-nova-web-fonts-master/fonts/fonts.css" />
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" type="text/css" href="fonts/proxima-nova-web-fonts-master/fonts/fonts.min.css" />
+	<link rel="stylesheet" href="https://fonts.google.com/?family=Nunito+Sans">
+	<link rel="stylesheet" href="css/font-awesome.css">
+	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	<main>
 		<nav>
-			<div class="back">Go back</div>
-			<div class="logo"></div>
-			<div class="sign">Sign in</div>
+			<a href="#" class="back">Go back</a>
+			<a href="#" class="home"><img src="" alt="logo"></a>
+			<a href="#" class="sign">Sign in</a>
 		</nav>
+		<main>
 		<form method="post" enctype="#">
 			<div class="order-header">
 				<h2>
@@ -75,7 +79,7 @@
 					</div>
 				</label>
 			</section>
-			<fieldset class="order-details upload">
+			<fieldset class="order-details files">
 				<h2>Upload your documents</h2>
 				<span>(Doc, Docx, Text, PDF, Markdown)</span>
 				<div>
@@ -105,15 +109,97 @@
 					</table>
 				</div>
 			</fieldset>
-
-
-
-
-
-			<fieldset class="order-details"></fieldset>
-			<fieldset class="order-details"></fieldset>
-			<fieldset class="order-details"></fieldset>
-			<fieldset class="order-details"></fieldset>
+			<fieldset class="order-details languages">
+				<h2>Choose your languages pairings</h2>
+				<div class="from-lang">From
+					<select name="" id="">
+						<option value="english">English</option>
+						<option value="russian">Russian</option>
+					</select>
+				</div>
+				<div class="to-lang">To
+					<select name="" id="">
+						<option value="">Arabic</option>
+						<option value="">Kurdish</option>
+					</select>
+					<select name="" id="">
+						<option value="">Kurdish</option>
+						<option value="">Arabic</option>
+					</select>
+					<i></i>
+					<button>+ Add</button>
+				</div>
+			</fieldset>
+			<fieldset class="order-details tone">
+				<h1>Select your desired tone</h1>
+				<label for="#" class="select-tone">
+					<input type="radio" name="var" value="friendly" required hidden>
+					<div class="select-wrapper">
+						<i></i>
+						Friendly / Casual
+					</div>
+				</label>
+				<label for="#" class="select-tone">
+					<input type="radio" name="var" value="corporate" required hidden>
+					<div class="select-wrapper">
+						<i></i>
+						Corporate / Pro
+					</div>
+				</label>
+				<label for="#" class="select-tone">
+					<input type="radio" name="var" value="media" required hidden>
+					<div class="select-wrapper">
+						<i></i>
+						Media / Formal
+					</div>
+				</label>
+			</fieldset>
+			<fieldset class="order-details urgent">
+				<h2>Tell us how urgent this job is</h2>
+				<input required type="range" name="urgent" min='0' max='100' step='25' value="50"/>
+				<i></i>
+				<div class="urgent">
+					<legend>
+						Timeline info
+					</legend>
+					<p>With an <span class="average">Average</span> timeline set up, our expert translator can take a reasonable amount of time perfecting your translation</p>
+				</div>
+ 			</fieldset>
+			<fieldset class="order-details payment">
+				<h2>Sign up and choose a payment method</h2>
+				<p>Already have an account with us?<a href="#">Sign in</a></p>
+				<div class="fullname-client">
+				<label for="">Full name<input type="text" value="Mathieu Mayer"></label>
+				</div>
+				<div class="email-password-client">
+				<label for="">Email adress<input type="text" value="mathieu.mm@me.com"></label>
+				<label for="">Choose a password<input type="password" value="mathieu.mm@me.com"></label>
+				</div>
+				<div class="pay-method">
+					<label for="#" class="select-pay-method">
+						<input type="radio" name="var" value="visa" required hidden>
+						<div class="select-wrapper">
+							<img src="img/visa.jpg" alt="visa" class="select-img">
+						</div>
+					</label>
+					<label for="#" class="select-pay-method">
+						<input type="radio" name="var" value="paypal" required hidden>
+						<div class="select-wrapper">
+							<img src="img/paypal.jpg" alt="paypal" class="select-img">
+						</div>
+					</label>
+					<label for="#" class="select-pay-method">
+						<input type="radio" name="var" value="amazon" required hidden>
+						<div class="select-wrapper">
+							<img src="img/amazon.jpg" alt="amazon" class="select-img">
+						</div>
+					</label>
+				</div>
+				<div class="card-info">
+					
+				</div>
+				
+			</fieldset>
 
 
 

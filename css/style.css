@@ -1,0 +1,114 @@
+/*need to add reset defoult css
+https://cssreset.com/scripts/eric-meyer-reset-css/*/
+
+body {
+	font-family: 'Proxima Nova', 'Nunito Sans', Georgia, sans-serif;
+}
+/*styling  header order section*/
+.order-section {
+		display: flex;
+		width: 100%;
+}
+.order-section > .left {
+		flex-grow: 100%;
+}
+.order-section > .right {
+		width: 400px;
+}
+
+/*styling select radio-button*/
+.select-wrapper {
+	position: relative;
+	z-index: 1;
+	border: 3px solid transparent;
+	border-radius: 3px;
+}
+
+input[name=var]:checked + .select-wrapper {
+	border: 3px solid $sky-blue;
+	border-radius: 3px;
+}
+
+input[name=var]:checked + .select-wrapper:after {
+	font-family: 'FontAwesome';
+	content: "\f058";
+	position: absolute;
+	top: -8px;
+	left: 240px;
+	color: $sky-blue;
+	font-size: 18pt;
+	z-index: 2;
+	background-color: #ffffff;
+	line-height: 10pt;
+}
+
+/*styling for range input*/
+input[type=range] {
+	-webkit-appearance: none;
+	width: 300px;
+	margin-top: 50px;
+	position: relative;
+}
+
+input[type=range]::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	width: 40px;
+	height: 40px;
+	border-radius: 20px;
+	background: orange;
+	margin-top: -10px;
+	z-index: 2;
+	position: relative;
+}
+
+input[type=range]::after {
+	content: '';
+	display: block;
+	width: 20px;
+	height: 20px;
+	border-radius: 10px;
+	background: black;
+	position: absolute;
+	z-index: 1;
+}
+
+input[type=range]::before {
+	content: '';
+	display: block;
+	width: 20px;
+	height: 20px;
+	border-radius: 10px;
+	background: black;
+	position: absolute;
+	right: 0;
+	z-index: 1;
+}
+
+
+input[type=range]::-webkit-slider-runnable-track {
+	-webkit-appearance: none;
+	width: 300px;
+	background: grey;
+	height: 20px;
+	border-radius: 10px;
+}
+/*styling css-counter*/
+.container {
+	counter-reset: section;
+}
+
+.container h3::before {
+	counter-increment: section;
+	content: counter(section);
+	display: inline-block;
+	color: white;
+	background: #555;
+	border: 5px solid #555;
+	padding: 1px 15px;
+	margin-right: 16px;
+	border-radius: 50%;
+}
+
+*:before, *:after {
+	box-sizing: inherit;
+}
