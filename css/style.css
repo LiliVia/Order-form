@@ -5,34 +5,20 @@ https://cssreset.com/scripts/eric-meyer-reset-css/*/
 	border: 2px solid black;
 }*/
 
-.back {
-  position: relative;
-  max-width: 2500px;
-}
-.back > img {
-  position: absolute;
-  width: 100%;
-  opacity: 0.6;
-}
-
 /*main body html*/
 html,
-body,
-main {
+body {
   height: 100%;
+  width: 1554px;
   box-sizing: border-box;
   font-family: 'Proxima Nova', 'Nunito Sans', Georgia, sans-serif;
 }
 
-header,
-main {
-  width: 1560px;
-}
-/**,
+*,
 *:before,
 *:after {
 	box-sizing: inherit;
-}*/
+}
 
 /*buttons*/
 
@@ -40,6 +26,7 @@ main {
 .btn:focus {
   color: #76a7e1;
   border: 2px solid #76a7e1;
+  border-radius: 5px;
   cursor: pointer;
 }
 
@@ -60,38 +47,26 @@ nav {
   margin: auto;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+
 }
 
-nav a {
-  display: block;
+nav button {
   color: #000;
-  padding: 18px 36px;
-  text-decoration: none;
+  padding: 18px 46px;
   text-transform: uppercase;
-  font-weight: 300;
-  border: 1px solid #cad0e2;
+  font-weight: 600;
+  border: 2px solid #cad0e2;
   border-radius: 5px;
-  text-align: center;
-  width: 100px;
 }
 
-.top-logo {
-  position: relative;
-  border: none;
-}
-.top-logo img {
-  width: 110px;
-  position: absolute;
-  top: -30px;
-  right: 30px;
-}
 
 /* form  */
 
 form {
   border: 2px solid blue;
-  min-width: 1250px;
-  width: 1250px;
+  min-width: 1246px;
+  width: 1246px;
   margin: 0 auto;
 }
 
@@ -448,14 +423,14 @@ td:last-child {
   border: 2px solid blue;
 }
 
-.range-wrapper {
+/* .range-wrapper {
   text-align: center;
   border: 2px solid blue;
   padding: 0 60px;
   height: 70%;
-}
+} */
 
-.range-wrapper .strong {
+.range-wrapper strong {
   text-transform: uppercase;
   color: #ffc107;
   font-weight: 600;
@@ -522,23 +497,21 @@ input[type='range']::-webkit-slider-runnable-track {
   text-transform: uppercase;
   font-weight: 600;
   font-size: 14px;
-  width: 80%;
-  height: 35%;
+  width: 70%;
+  padding: 20px 0 50px 0;
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
   border: 2px solid blue;
 }
 
 .legend {
   border: 2px solid blue;
-  width: 450px;
-  height: 25%;
-  padding: 20px 20px 0 30px;
+  width: 460px;
+  padding: 45px 10px 40px 35px;
+  line-height: 170%;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  /*position: relative;*/
+  position: relative;
   color: grey;
 }
 
@@ -553,12 +526,12 @@ input[type='range']::-webkit-slider-runnable-track {
   top: -5px;
   left: 60px;
 }
-
+/* 
 .legend p {
   display: flex;
   justify-content: flex-start;
   align-items: flex-end;
-}
+} */
 
 .payment {
   width: 100%;
@@ -590,11 +563,11 @@ input[type='range']::-webkit-slider-runnable-track {
 }
 
 /*styling css-counter*/
-.container {
+fieldset.order-details {
   counter-reset: section;
 }
 
-.container h3::before {
+order-details.order-details h2::before {
   counter-increment: section;
   content: counter(section);
   display: inline-block;
