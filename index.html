@@ -134,7 +134,7 @@
 			</fieldset>
 			<fieldset class="order-details languages">
 				<h2>Choose your languages pairings</h2>
-				<div class="from-lang">From
+				<div class="from-lang"><span>From</span>
 					<select name="from-language" id="from-language">
 						<option value="arabic">Arabic</option>
 						<option value="kurdish">Kurdish</option>
@@ -142,24 +142,22 @@
 						<option value="russian">Russian</option>
 					</select>
 				</div>
-				<div class="to-lang">To
+				<div class="to-lang"><span>To</span>
 					<select name="to-language" id="to-language">
 						<option value="arabic" selected>Arabic</option>
 						<option value="kurdish">Kurdish</option>
 						<option value="english">English</option>
 						<option value="russian">Russian</option>
 					</select>
-				</div>
-				<div class="to-lang">To
 					<select name="to-language" id="to-language">
 						<option value="arabic">Arabic</option>
 						<option value="kurdish" selected>Kurdish</option>
 						<option value="english">English</option>
 						<option value="russian">Russian</option>
 					</select>
-				</div>
 					<button type="button" class="btn btn-remove" aria-label="Remove"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></button>
-					<button type="button" class="btn-add">+ &#8194; Add</button>
+					<button type="button" class="btn-add">Add</button>
+				</div>
 			</fieldset>
 			<fieldset class="order-details tone">
 				<h2>Select your desired tone</h2>
@@ -209,22 +207,22 @@
 				<label>Choose a password<input type="password" name="password" minlength="6" maxlength="12" required></label>
 				</div>
 				<div class="pay-method">
-					<input type="radio" name="paymethod" id="pay1" value="visa">
+					<input type="radio" name="paymethod" id="pay1" value="visa" checked required>
 					<label for="pay1">
 						<div class="select-wrapper">
-							<img src="img/visa-master.png" width="260px" alt="master/visa" class="select-img">
+							<img src="img/visa-master.png" width="240px" alt="master/visa" class="select-img">
 						</div>
 					</label>
-					<input type="radio" name="paymethod" id="pay2" value="paypal">
+					<input type="radio" name="paymethod" id="pay2" value="paypal" required>
 					<label for="pay2">
 						<div class="select-wrapper">
-							<img src="img/pay-pal.png" width="260px" alt="paypal" class="select-img">
+							<img src="img/pay-pal.png" width="240px" alt="paypal" class="select-img">
 						</div>
 					</label>
-					<input type="radio" name="paymethod" id="pay3" value="amazon">
+					<input type="radio" name="paymethod" id="pay3" value="amazon" required>
 					<label for="pay3">
 						<div class="select-wrapper">
-							<img src="img/amazon.png" width="260px" alt="amazon" class="select-img">
+							<img src="img/amazon.png" width="240px" alt="amazon" class="select-img">
 						</div>
 					</label>
 				</div>
@@ -235,7 +233,7 @@
 					</label>
 					<label class="card-info-date">
 						Expiry date
-						<input type="date" name="card-date" placeholder="dd.mm.yy" required>
+						<input type="date" name="card-date" placeholder="DD/MM/YY" required>
 					</label>
 					<label class="card-info-password">
 						Code
