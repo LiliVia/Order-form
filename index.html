@@ -197,14 +197,19 @@
 					<h2>Sign up and choose a payment method</h2>
 					<p>Already have an account with us?
 						<a href="#">Sign in</a></p>
-					<div class="fullname-client">
-						<label>Full name
+					<div class="info-client">
+						<p>
+							<label for="full-name">Full name</label>
 							<input type="text" placeholder="Mathieu Mayer" id="full-name" name="full-name" minlength="10" pattern="^[a-zA-Z\s\.\-]*$" required>
-						</label>
-					</div>
-					<div class="email-password-client">
-					<label>Email adress<input type="text" placeholder="mathieu.mm@me.com" id="email" name="email-address" required></label>
-					<label>Choose a password<input type="password" name="password" minlength="6" maxlength="12" required></label>
+						</p>
+						<p>
+							<label for="email">Email adress</label>
+							<input type="text" placeholder="mathieu.mm@me.com" id="email" name="email-address" required>
+						</p>
+						<p>
+							<label for="e-password">Choose a password</label>
+							<input type="password" name="password" id="e-password" minlength="6" maxlength="12" required>
+						</p>
 					</div>
 					<div class="pay-method">
 						<input type="radio" name="paymethod" id="pay1" value="visa" checked required>
@@ -226,18 +231,19 @@
 							</div>
 						</label>
 					</div>
-					<div class="pay-method__card-info">
-						<label class="card-info-number">
-							Card number
+					<div class="pay-method card-info">
+						<p>
+							<label class="card-info-number" for="card-number">Card number</label>
 							<input type="text" name="card-number" pattern="\d*" minlength="16" maxlength="16" required>
-						</label>
-						<label class="card-info-date">
-							Expiry date
+						</p>
+						<p>
+							<label class="card-info-date" for="card-date">Expiry date</label>
 							<input type="date" name="card-date" placeholder="DD/MM/YY" required>
-						</label>
-						<label class="card-info-password">
-							Code
-							<input type="password" name="card-password" pattern="\d*" minlength="3" maxlength="3" required=""></label>
+						</p>
+						<p>
+							<label class="card-info-password" for="card-password">Code</label>
+							<input type="password" name="card-password" pattern="\d*" minlength="3" maxlength="3" required="">
+						</p>
 					</div>
 				</fieldset>
 				<section class="agree-order-quoter">
