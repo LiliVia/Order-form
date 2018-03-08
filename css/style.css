@@ -780,18 +780,26 @@ footer section {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  line-height: 150%;
+  line-height: 140%;
+}
+
+footer h3 .fa {
+  font-size: 24px;
 }
 
 footer section h3 {
   position: relative;
+  margin: 0 0.9rem 0.5rem 0;
 }
+
 footer a {
   color: inherit;
 }
+
 .what-we-do {
   width: 260px;
 }
+
 .what-we-do .fa {
   position: absolute;
   top: 3px;
