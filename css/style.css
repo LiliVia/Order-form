@@ -1,15 +1,9 @@
-/*need to add reset defoult css
-https://cssreset.com/scripts/eric-meyer-reset-css/*/
-
-/** {
-	border: 2px solid black;
-}*/
 
 /*main body html*/
 html,
 body {
   height: 100%;
-  width: 1554px;
+  width: 100%;
   box-sizing: border-box;
   font-family: 'Proxima Nova', 'Nunito Sans', Georgia, sans-serif;
 }
@@ -17,7 +11,7 @@ body {
 *,
 *:before,
 *:after {
-	box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 /*buttons*/
@@ -30,15 +24,21 @@ body {
   cursor: pointer;
 }
 
-.btn:hover a,
-.btn:focus a {
+.place-order:hover,
+.place-order:focus {
+  color: #fff;
+  background: #57c9c6;
+}
+
+a:hover,
+select:hover {
   color: #76a7e1;
 }
 
 /*header navigation section*/
 header {
   background: #eceef4;
-  margin-top: 1.5rem;
+  padding-top: 1.5rem;
   height: 15.5rem;
   display: flex;
 }
@@ -91,7 +91,6 @@ h5 {
   display: flex;
   width: 100%;
   height: 11rem;
-  border: 2px solid blue;
   justify-content: space-between;
 }
 
@@ -123,7 +122,6 @@ td {
 }
 /*table in header order*/
 .left > table {
-  border: 2px solid blue;
   position: absolute;
   top: 65px;
   left: 55px;
@@ -170,7 +168,6 @@ td {
   position: relative;
   width: 100%;
   font-size: 0.9em;
-  border: 2px solid blue;
   padding: 5px 2px 2px 35px;
   color: #656471;
   line-height: 1.3;
@@ -196,7 +193,6 @@ a {
 .select-translate-object {
   width: 100%;
   height: 33rem;
-  border: 2px solid blue;
 }
 
 .select-translate-object > h1 {
@@ -305,17 +301,14 @@ fieldset > h2 {
 .files {
   width: 100%;
   height: 30rem;
-  border: 2px solid blue;
 }
 
 .files > h2 {
-  border: 2px solid blue;
   padding: 2rem 0 3rem 9rem;
 }
 
 .files > div {
   margin-top: 20px;
-  border: 2px solid blue;
   padding: 8px 0 40px 150px;
 }
 
@@ -410,8 +403,7 @@ td:last-child {
 .btn-remove {
   background: none;
   border: none;
-    border: 2px solid transparent;
-
+  border: 2px solid transparent;
   cursor: pointer;
 }
 
@@ -424,7 +416,6 @@ td:last-child {
 .languages {
   width: 100%;
   height: 22rem;
-  border: 2px solid blue;
   text-transform: uppercase;
   font-weight: 600;
 }
@@ -456,37 +447,22 @@ td:last-child {
 }
 
 
-.from-lang > select,
-.to-lang > select {
-  position: relative;
+.from-lang select,
+.to-lang select {
+  margin: 0 10px 0 20px;
+  width: 220px;
+  padding: 18px 50px;
   font-size: 1em;
   letter-spacing: 1px;
   font-weight: 400;
-  margin: 0 10px 0 20px;
-  width: 210px;
-  padding: 18px 50px;
   color: #9098b8;
   border: 2px solid #ededee;
   border-radius: 5px;
-  background: #f8f7fa;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  background: url(../img/arrow-grey-24.png) 94% / 12% no-repeat, url(../img/line-grey-24.png) 87% / 30% no-repeat, #f8f7fa;
   cursor: pointer;
-}
-
-select::after {
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 50px;
-  height: 100%;
-  line-height: 38px;
-  content: '\25BC';
-  text-align: center;
-  color: #714BB9;
-  font-size: 24px;
-  border-left: 1px solid #3C1C78;
 }
 
 .to-lang .fa-trash,
@@ -500,7 +476,6 @@ select::after {
 .tone {
   width: 42%;
   height: 28rem;
-  border: 2px solid blue;
   float: left;
 }
 
@@ -537,15 +512,7 @@ select::after {
 .urgent {
   width: 58%;
   height: 28rem;
-  border: 2px solid blue;
 }
-
-/* .range-wrapper {
-  text-align: center;
-  border: 2px solid blue;
-  padding: 0 60px;
-  height: 70%;
-} */
 
 .range-wrapper .strong {
   text-transform: uppercase;
@@ -656,15 +623,75 @@ input[type='range']::-webkit-slider-runnable-track {
 .payment {
   width: 100%;
   height: 48rem;
-  border: 2px solid blue;
 }
 
 .payment h2 {
   padding: 2rem 0 2rem 9rem;
 }
 
+
+.payment input {
+  padding: 1em;
+  letter-spacing: 0.1em;
+  margin-top: 0.5em;
+  border: 1px solid #dbdbe3;
+  border-radius: 5px;
+  color: #8a92b4;
+  font-size: 15px;
+  width: 300px;
+}
+
+.info-client input:invalid + span:after,
+.info-client input:valid + span:after {
+  font-family: 'FontAwesome';
+  position: absolute;
+  top: 70px;
+  z-index: 2;
+  right: 10px;
+  font-size: 1.6em;
+  background-color: #fff;
+  line-height: 10pt;
+}
+
+.info-client input:valid + span:after {
+  content: "\f058";
+  color: #76a7e1;
+}
+
+.info-client input:invalid + span:after {
+  content: "\f057";
+  color: #ff5a59;
+}
+
+.info-client label, .card-info label {
+  padding-left: 0.8em;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  display: block;
+}
+
+.info-client p {
+  display: inline-block;
+  position: relative;
+}
+
+.payment > p, .info-client p {
+  padding: 2rem 0 2rem 9rem;
+}
+
+.info-client p:last-child {
+  padding-left: 2rem;
+}
+
+.info-client p:first-child {
+  padding-bottom: 1rem;
+}
+
+
 .pay-method  {
-  padding: 1rem 2rem 0 9rem;
+  padding: 2rem 2rem 0 9rem;
   display: flex;
 }
 
@@ -710,12 +737,35 @@ input[type='range']::-webkit-slider-runnable-track {
   line-height: 10pt;
 }
 
+.card-info p {
+  padding-top: 3rem;
+  margin: 0 8px;
+}
+
+.card-info p:first-child input {
+  width: 400px;
+  background: url(../img/card_visa_48.png) 98% / 14% no-repeat;
+}
+
+.card-info p:nth-child(2) input {
+  width: 180px;
+  padding: 12px;
+}
+
+.card-info p:last-child input {
+  width: 120px;
+}
+
+.card-info p:nth-child(2) {
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
 /*submit order section*/
 
 .agree-order-quoter {
   width: 100%;
   height: 13rem;
-  border: 2px solid blue;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -769,14 +819,12 @@ footer {
   height: 20rem;
   background: #494c63;
   color: #eceef4;
-  border: 2px solid blue;
 }
 
 footer section {
   font-size: 14px;
   padding: 10px 0 0 25px;
   height: 40%;
-  border: 2px solid blue;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
