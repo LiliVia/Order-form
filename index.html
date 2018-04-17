@@ -12,9 +12,6 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	<!-- <div class="back">
-		<img src="checkout-preview_2x.png" alt="">
-	</div> -->
 	<div class="wrapper">
 		<header>
 			<nav>
@@ -200,16 +197,21 @@
 					<div class="info-client">
 						<p>
 							<label for="full-name">Full name</label>
-							<input type="text" placeholder="Mathieu Mayer" id="full-name" name="full-name" minlength="10" pattern="^[a-zA-Z\s\.\-]*$" required>
+							<input type="text" value="Mathieu Mayer" id="full-name" name="full-name" minlength="10" pattern="^[a-zA-Z\s\.\-]*$" required>
+							<span></span>
 						</p>
-						<p>
-							<label for="email">Email adress</label>
-							<input type="text" placeholder="mathieu.mm@me.com" id="email" name="email-address" required>
-						</p>
-						<p>
-							<label for="e-password">Choose a password</label>
-							<input type="password" name="password" id="e-password" minlength="6" maxlength="12" required>
-						</p>
+						<div class="info-client-wrapper">
+							<p>
+								<label for="email">Email adress</label>
+								<input type="text" value="mathieu.mm@me.com" id="email" name="email-address" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
+								<span></span>
+							</p>
+							<p>
+								<label for="e-password">Choose a password</label>
+								<input type="password" name="password" id="e-password" minlength="6" maxlength="12" pattern="[0-9]{6,12}" required>
+								<span></span>
+							</p>
+						</div>
 					</div>
 					<div class="pay-method">
 						<input type="radio" name="paymethod" id="pay1" value="visa" checked required>
@@ -234,15 +236,15 @@
 					<div class="pay-method card-info">
 						<p>
 							<label class="card-info-number" for="card-number">Card number</label>
-							<input type="text" name="card-number" pattern="\d*" minlength="16" maxlength="16" required>
+							<input type="text" name="card-number" pattern="[0-9]{16}" minlength="16" maxlength="16" required>
 						</p>
 						<p>
 							<label class="card-info-date" for="card-date">Expiry date</label>
-							<input type="date" name="card-date" placeholder="DD/MM/YY" required>
+							<input type="date" name="card-date" value="2018-01-01" required>
 						</p>
 						<p>
 							<label class="card-info-password" for="card-password">Code</label>
-							<input type="password" name="card-password" pattern="\d*" minlength="3" maxlength="3" required="">
+							<input type="password" name="card-password" pattern="[0-9]{4}" minlength="4" maxlength="4"  required="">
 						</p>
 					</div>
 				</fieldset>
