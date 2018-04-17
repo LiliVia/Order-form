@@ -12,277 +12,284 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	<!-- <div class="back">
-		<img src="checkout-preview_2x.png" alt="">
-	</div> -->
 	<div class="wrapper">
-	<header>
-		<nav>
-			<button class="previous btn">
-				<i class="fa fa-long-arrow-left fa-lg" aria-hidden="true"></i>
-				&nbsp;Go back</button>
-			<a href="#" class="top-logo"><img src="img/logo.png" alt="logo" width="110px"></a>
-			<button class="sign btn">
-				<i class="fa fa-user" aria-hidden="true" fa-lg></i>&nbsp;Sign in</button>
-		</nav>
-	</header>
+		<header>
+			<nav>
+				<button class="previous btn">
+					<i class="fa fa-long-arrow-left fa-lg" aria-hidden="true"></i>
+					&nbsp;Go back</button>
+				<a href="#" class="top-logo"><img src="img/logo.png" alt="logo" width="110px"></a>
+				<button class="sign btn">
+					<i class="fa fa-user" aria-hidden="true" fa-lg></i>&nbsp;Sign in</button>
+			</nav>
+		</header>
 		<main>
-		<form action="/orders" method="post" enctype="#">
-			<section class="order-section">
-				<div class="left order-header">
-					<h3>
-					<i class="fa fa-clipboard fa-lg" aria-hidden="true"></i> 
-						&nbsp; Your order
-					</h3>
-					<table>
-						<thead>
-							<tr>
-								<th>Items</th>
-								<th>Details</th>
-								<th>Price</th>
-								<th>Delivery</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>2 documents</td>
-								<td>2 languages</td>
-								<td value='USD:696.00'>$ 696.00</td>
-								<td>48 hours*</td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-				<div class="push-order">
-					<button id="order" class="place-order btn">Place order</button>
-					<button id="quote" class="print-quote btn" type="button">Print a quote</button>
-				</div>
-				<div class="right">
-					<section class="help-center">
-					<i class="fa fa-life-ring fa-lg" aria-hidden="true"></i>
-					<h5>
-					Help center</h5>
-						<br>
-					<p>
-						If you need assistance while placing your order,
-						contact one of our beloved Project Manager by phone or email
-					</p> <br>
-					<address class='address-block'>
-						<a href="tel:+971(0)555 555">+971(0)555 555</a>
-						<a href="mailto:help@qtest.com">help@qtest.com</a>
-					</address>
-					</section>
-				</div>
-			</section>
-			<section class="select-translate-object">
-				<h1>Select what you want to translate</h1>
-				<section>
-					<input type="radio" id="type1" name="object-type" value="website" required>
-					<label for="type1" class="select-type">
-					<div class="select-wrapper">
-						<img src="img/website.png" width="300px" alt="select-website" class="select-img">
-					</div>
-					</label>
-					<input type="radio" id="type2" name="object-type" value="document" required checked>
-				<label for="type2" class="select-type">
-					<div class="select-wrapper">
-						<img src="img/document.png" width="300px" alt="select-document" class="select-img">
-					</div>
-				</label>
-					<input type="radio" id="type3" name="object-type" value="social-account" required>
-				<label for="type3" class="select-type">
-					<div class="select-wrapper">
-						<img src="img/social-account.png" width="300px" alt="select-social-account" class="select-img">
-					</div>
-				</label>
-				</section>
-			</section>
-			<fieldset class="order-details files">
-					<h2>Upload your documents<small>&nbsp;&nbsp;(Doc, Docx, Text, PDF, Markdown)</small></h2>
-					<div>
-						<input type="file" id="files-uploads" name="files-uploads" accept=".doc, .docx, .txt, .pdf, .md" multiple>
-						<label for="files-uploads" class="btn btn-upload">
-							<i class="fa fa-cloud-upload" aria-hidden="true"></i> Upload a new file
-						</label>
-					</div>
-					<div class="preview">
+			<form action="/orders" method="post" enctype="#">
+				<section class="order-section">
+					<div class="left order-header">
+						<h3>
+						<i class="fa fa-clipboard fa-lg" aria-hidden="true"></i> 
+							&nbsp; Your order
+						</h3>
 						<table>
 							<thead>
 								<tr>
-									<th>File name</th>
-									<th>File size</th>
-									<th>Number of words</th>
-									<th>Remove</th>
+									<th>Items</th>
+									<th>Details</th>
+									<th>Price</th>
+									<th>Delivery</th>
 								</tr>
 							</thead>
 							<tbody>
 								<tr>
-									<td><i class="fa fa-file-text fa-lg" aria-hidden="true"></i>&nbsp;business_operations.docx</td>
-									<td>78kb</td>
-									<td>842</td>
-									<td><button type="button" class="btn btn-remove" aria-label="Remove"><i class="fa fa-trash fa-lg" aria-hidden="true"></button></td>
-								</tr>
-								<tr>
-									<td><i class="fa fa-file-text fa-lg" aria-hidden="true"></i>&nbsp;business_financial.docx</td>
-									<td>26kb</td>
-									<td>2,326</td>
-									<td><button type="button" class="btn btn-remove" aria-label="Remove"><i class="fa fa-trash fa-lg" aria-hidden="true"></button></td>
+									<td>2 documents</td>
+									<td>2 languages</td>
+									<td value='USD:696.00'>$ 696.00</td>
+									<td>48 hours*</td>
 								</tr>
 							</tbody>
 						</table>
 					</div>
-			</fieldset>
-			<fieldset class="order-details languages">
-				<h2>Choose your languages pairings</h2>
-				<div class="from-lang"><span>From</span>
-					<select name="from-language" id="from-language">
-						<option value="arabic">Arabic</option>
-						<option value="kurdish">Kurdish</option>
-						<option value="english" selected>English</option>
-						<option value="russian">Russian</option>
-					</select>
-				</div>
-				<div class="to-lang"><span>To</span>
-					<select name="to-language" id="to-language">
-						<option value="arabic" selected>Arabic</option>
-						<option value="kurdish">Kurdish</option>
-						<option value="english">English</option>
-						<option value="russian">Russian</option>
-					</select>
-					<select name="to-language" id="to-language">
-						<option value="arabic">Arabic</option>
-						<option value="kurdish" selected>Kurdish</option>
-						<option value="english">English</option>
-						<option value="russian">Russian</option>
-					</select>
-					<button type="button" class="btn btn-remove" aria-label="Remove"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></button>
-					<button type="button" class="btn-add">Add</button>
-				</div>
-			</fieldset>
-			<fieldset class="order-details tone">
-				<h2>Select your desired tone</h2>
-				<section>
-					<input type="radio" id="tone1" name="tone" value="friendly" required>
-						<label for="tone1" class="btn btn-tone">
-								<span><i class="fa fa-comments-o fa-lg" aria-hidden="true"></i> &nbsp; Friendly / Casual</span>
-						</label>
-						<input type="radio" id="tone2" name="tone" value="corporate" required>
-					<label for="tone2" class="btn btn-tone">
-							<span><i class="fa fa-suitcase fa-lg" aria-hidden="true"></i> &nbsp; Corporate / Pro</span>
-					</label>
-						<input type="radio" id="tone3" name="tone" value="media" required checked>
-					<label for="tone3" class="btn btn-tone">
-							<span><i class="fa fa-bullhorn fa-lg" aria-hidden="true"></i> &nbsp; Media / Formal</span>
-					</label>
-				</section>
-			</fieldset>
-			<fieldset class="order-details urgent">
-				<h2>Tell us how urgent this job is</h2>
-				<div class="range-wrapper">
-					<input required type="range" name="urgent" min='0' max='10' step='5' value="5"/>
-					<ul>
-						<li>I got time</li>
-						<li><span class="strong">Average</span></li>
-						<li>Yesterday</li>
-					</ul>
-					<div class="legend">
-					<h3><span><i class="fa fa-info-circle fa-lg" aria-hidden="true"></i></span>Timeline info</h3>
-					<p>
-					With an <span class="strong">Average</span> timeline set up, our expert translator can take a reasonable amount of time perfecting your translation
-					</p>
+					<div class="push-order">
+						<button id="order" class="place-order btn">Place order</button>
+						<button id="quote" class="print-quote btn" type="button">Print a quote</button>
 					</div>
-				</div>
-			</fieldset>
-			<fieldset class="order-details payment">
-				<h2>Sign up and choose a payment method</h2>
-				<p>Already have an account with us?
-					<a href="#">Sign in</a></p>
-				<div class="fullname-client">
-					<label>Full name
-						<input type="text" placeholder="Mathieu Mayer" id="full-name" name="full-name" minlength="10" pattern="^[a-zA-Z\s\.\-]*$" required>
-					</label>
-				</div>
-				<div class="email-password-client">
-				<label>Email adress<input type="text" placeholder="mathieu.mm@me.com" id="email" name="email-address" required></label>
-				<label>Choose a password<input type="password" name="password" minlength="6" maxlength="12" required></label>
-				</div>
-				<div class="pay-method">
-					<input type="radio" name="paymethod" id="pay1" value="visa" checked required>
-					<label for="pay1">
+					<div class="right">
+						<section class="help-center">
+						<i class="fa fa-life-ring fa-lg" aria-hidden="true"></i>
+						<h5>
+						Help center</h5>
+							<br>
+						<p>
+							If you need assistance while placing your order,
+							contact one of our beloved Project Manager by phone or email
+						</p> <br>
+						<address class='address-block'>
+							<a href="tel:+971(0)555 555">+971(0)555 555</a>
+							<a href="mailto:help@qtest.com">help@qtest.com</a>
+						</address>
+						</section>
+					</div>
+				</section>
+				<section class="select-translate-object">
+					<h1>Select what you want to translate</h1>
+					<section>
+						<input type="radio" id="type1" name="object-type" value="website" required>
+						<label for="type1" class="select-type">
 						<div class="select-wrapper">
-							<img src="img/visa-master.png" width="240px" alt="master/visa" class="select-img">
+							<img src="img/website.png" width="300px" alt="select-website" class="select-img">
+						</div>
+						</label>
+						<input type="radio" id="type2" name="object-type" value="document" required checked>
+					<label for="type2" class="select-type">
+						<div class="select-wrapper">
+							<img src="img/document.png" width="300px" alt="select-document" class="select-img">
 						</div>
 					</label>
-					<input type="radio" name="paymethod" id="pay2" value="paypal" required>
-					<label for="pay2">
+						<input type="radio" id="type3" name="object-type" value="social-account" required>
+					<label for="type3" class="select-type">
 						<div class="select-wrapper">
-							<img src="img/pay-pal.png" width="240px" alt="paypal" class="select-img">
+							<img src="img/social-account.png" width="300px" alt="select-social-account" class="select-img">
 						</div>
 					</label>
-					<input type="radio" name="paymethod" id="pay3" value="amazon" required>
-					<label for="pay3">
-						<div class="select-wrapper">
-							<img src="img/amazon.png" width="240px" alt="amazon" class="select-img">
+					</section>
+				</section>
+				<fieldset class="order-details files">
+						<h2>Upload your documents<small>&nbsp;&nbsp;(Doc, Docx, Text, PDF, Markdown)</small></h2>
+						<div>
+							<input type="file" id="files-uploads" name="files-uploads" accept=".doc, .docx, .txt, .pdf, .md" multiple>
+							<label for="files-uploads" class="btn btn-upload">
+								<i class="fa fa-cloud-upload" aria-hidden="true"></i> Upload a new file
+							</label>
 						</div>
+						<div class="preview">
+							<table>
+								<thead>
+									<tr>
+										<th>File name</th>
+										<th>File size</th>
+										<th>Number of words</th>
+										<th>Remove</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td><i class="fa fa-file-text fa-lg" aria-hidden="true"></i>&nbsp;business_operations.docx</td>
+										<td>78kb</td>
+										<td>842</td>
+										<td><button type="button" class="btn btn-remove" aria-label="Remove"><i class="fa fa-trash fa-lg" aria-hidden="true"></button></td>
+									</tr>
+									<tr>
+										<td><i class="fa fa-file-text fa-lg" aria-hidden="true"></i>&nbsp;business_financial.docx</td>
+										<td>26kb</td>
+										<td>2,326</td>
+										<td><button type="button" class="btn btn-remove" aria-label="Remove"><i class="fa fa-trash fa-lg" aria-hidden="true"></button></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+				</fieldset>
+				<fieldset class="order-details languages">
+					<h2>Choose your languages pairings</h2>
+					<div class="from-lang"><span>From</span>
+						<select name="from-language" id="from-language">
+							<option value="arabic">Arabic</option>
+							<option value="kurdish">Kurdish</option>
+							<option value="english" selected>English</option>
+							<option value="russian">Russian</option>
+						</select>
+					</div>
+					<div class="to-lang"><span>To</span>
+						<select name="to-language" id="to-language">
+							<option value="arabic" selected>Arabic</option>
+							<option value="kurdish">Kurdish</option>
+							<option value="english">English</option>
+							<option value="russian">Russian</option>
+						</select>
+						<select name="to-language" id="to-language">
+							<option value="arabic">Arabic</option>
+							<option value="kurdish" selected>Kurdish</option>
+							<option value="english">English</option>
+							<option value="russian">Russian</option>
+						</select>
+						<button type="button" class="btn btn-remove" aria-label="Remove"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></button>
+						<button type="button" class="btn-add">Add</button>
+					</div>
+				</fieldset>
+				<fieldset class="order-details tone">
+					<h2>Select your desired tone</h2>
+					<section>
+						<input type="radio" id="tone1" name="tone" value="friendly" required>
+							<label for="tone1" class="btn btn-tone">
+									<span><i class="fa fa-comments-o fa-lg" aria-hidden="true"></i> &nbsp; Friendly / Casual</span>
+							</label>
+							<input type="radio" id="tone2" name="tone" value="corporate" required>
+						<label for="tone2" class="btn btn-tone">
+								<span><i class="fa fa-suitcase fa-lg" aria-hidden="true"></i> &nbsp; Corporate / Pro</span>
+						</label>
+							<input type="radio" id="tone3" name="tone" value="media" required checked>
+						<label for="tone3" class="btn btn-tone">
+								<span><i class="fa fa-bullhorn fa-lg" aria-hidden="true"></i> &nbsp; Media / Formal</span>
+						</label>
+					</section>
+				</fieldset>
+				<fieldset class="order-details urgent">
+					<h2>Tell us how urgent this job is</h2>
+					<div class="range-wrapper">
+						<input required type="range" name="urgent" min='0' max='10' step='5' value="5"/>
+						<ul>
+							<li>I got time</li>
+							<li><span class="strong">Average</span></li>
+							<li>Yesterday</li>
+						</ul>
+						<div class="legend">
+						<h3><span><i class="fa fa-info-circle fa-lg" aria-hidden="true"></i></span>Timeline info</h3>
+						<p>
+						With an <span class="strong">Average</span> timeline set up, our expert translator can take a reasonable amount of time perfecting your translation
+						</p>
+						</div>
+					</div>
+				</fieldset>
+				<fieldset class="order-details payment">
+					<h2>Sign up and choose a payment method</h2>
+					<p>Already have an account with us?
+						<a href="#">Sign in</a></p>
+					<div class="info-client">
+						<p>
+							<label for="full-name">Full name</label>
+							<input type="text" value="Mathieu Mayer" id="full-name" name="full-name" minlength="10" pattern="^[a-zA-Z\s\.\-]*$" required>
+							<span></span>
+						</p>
+						<div class="info-client-wrapper">
+							<p>
+								<label for="email">Email adress</label>
+								<input type="text" value="mathieu.mm@me.com" id="email" name="email-address" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
+								<span></span>
+							</p>
+							<p>
+								<label for="e-password">Choose a password</label>
+								<input type="password" name="password" id="e-password" minlength="6" maxlength="12" pattern="[0-9]{6,12}" required>
+								<span></span>
+							</p>
+						</div>
+					</div>
+					<div class="pay-method">
+						<input type="radio" name="paymethod" id="pay1" value="visa" checked required>
+						<label for="pay1">
+							<div class="select-wrapper">
+								<img src="img/visa-master.png" width="240px" alt="master/visa" class="select-img">
+							</div>
+						</label>
+						<input type="radio" name="paymethod" id="pay2" value="paypal" required>
+						<label for="pay2">
+							<div class="select-wrapper">
+								<img src="img/pay-pal.png" width="240px" alt="paypal" class="select-img">
+							</div>
+						</label>
+						<input type="radio" name="paymethod" id="pay3" value="amazon" required>
+						<label for="pay3">
+							<div class="select-wrapper">
+								<img src="img/amazon.png" width="240px" alt="amazon" class="select-img">
+							</div>
+						</label>
+					</div>
+					<div class="pay-method card-info">
+						<p>
+							<label class="card-info-number" for="card-number">Card number</label>
+							<input type="text" name="card-number" pattern="[0-9]{16}" minlength="16" maxlength="16" required>
+						</p>
+						<p>
+							<label class="card-info-date" for="card-date">Expiry date</label>
+							<input type="date" name="card-date" value="2018-01-01" required>
+						</p>
+						<p>
+							<label class="card-info-password" for="card-password">Code</label>
+							<input type="password" name="card-password" pattern="[0-9]{4}" minlength="4" maxlength="4"  required="">
+						</p>
+					</div>
+				</fieldset>
+				<section class="agree-order-quoter">
+					<label class="agree-terms">
+						<input type="checkbox" name="agree-terms" required> &nbsp;
+						I agree to the <a href="#">Terms &amp; Conditions</a>
 					</label>
-				</div>
-				<div class="pay-method__card-info">
-					<label class="card-info-number">
-						Card number
-						<input type="text" name="card-number" pattern="\d*" minlength="16" maxlength="16" required>
-					</label>
-					<label class="card-info-date">
-						Expiry date
-						<input type="date" name="card-date" placeholder="DD/MM/YY" required>
-					</label>
-					<label class="card-info-password">
-						Code
-						<input type="password" name="card-password" pattern="\d*" minlength="3" maxlength="3" required=""></label>
-				</div>
-			</fieldset>
-			<section class="agree-order-quoter">
-				<label class="agree-terms">
-					<input type="checkbox" name="agree-terms" required> &nbsp;
-					I agree to the <a href="#">Terms &amp; Conditions</a>
-				</label>
-				<button for="order" class="place-order btn">Place order</button>
-				<button type="button" for="quote" class="print-quote btn">Print a quote</button>
+					<button for="order" class="place-order btn">Place order</button>
+					<button type="button" for="quote" class="print-quote btn">Print a quote</button>
+				</section>
+			</form>
+		</main>
+		<footer>
+			<section class="what-we-do">
+				<h3><i class="fa fa-heart-o fa-lg" aria-hidden="true"></i>&nbsp;What we do</h3>
+				<p>
+					<em>
+					We provide a full range of language services including content development, document, website and social media accounts translations.</em>
+				</p>
 			</section>
-		</form>
-	</main>
-	<footer>
-		<section class="what-we-do">
-			<h3><i class="fa fa-heart-o fa-lg" aria-hidden="true"></i>&nbsp;What we do</h3>
-			<p>
-				<em>
-				We provide a full range of language services including content development, document, website and social media accounts translations.</em>
-			</p>
-		</section>
-		<section class="our-address">
-			<h3><i class="fa fa-compass fa-lg" aria-hidden="true"></i>&nbsp;Our main office</h3>
-			<address>
+			<section class="our-address">
+				<h3><i class="fa fa-compass fa-lg" aria-hidden="true"></i>&nbsp;Our main office</h3>
+				<address>
+					<ul>
+						<li>Dubai, OAE</li>
+						<li>P.O. Box: 569408</li>
+						<li>
+							<a href="tel:+971(0)44278128">Phone: +971(0) 44278128</a>
+						</li>
+					</ul>
+				</address>
+			</section>
+			<section class="social-media">
+				<h3><i class="fa fa-share-alt fa-lg" aria-hidden="true"></i>&nbsp;Connect with us</h3>
 				<ul>
-					<li>Dubai, OAE</li>
-					<li>P.O. Box: 569408</li>
-					<li>
-						<a href="tel:+971(0)44278128">Phone: +971(0) 44278128</a>
-					</li>
+					<li><a href=""><i class="fa fa-facebook-square" aria-hidden="true"></i>&nbsp;Facebook</a></li>
+					<li><a href=""><i class="fa fa-twitter-square" aria-hidden="true"></i>&nbsp;Twitter</a></li>
+					<li><a href=""><i class="fa fa-linkedin-square" aria-hidden="true"></i>&nbsp;Linkedin</a></li>
 				</ul>
-			</address>
-		</section>
-		<section class="social-media">
-			<h3><i class="fa fa-share-alt fa-lg" aria-hidden="true"></i>&nbsp;Connect with us</h3>
-			<ul>
-				<li><a href=""><i class="fa fa-facebook-square" aria-hidden="true"></i>
-&nbsp;Facebook</a></li>
-				<li><a href=""><i class="fa fa-twitter-square" aria-hidden="true"></i>&nbsp;Twitter</a></li>
-				<li><a href=""><i class="fa fa-linkedin-square" aria-hidden="true"></i>&nbsp;Linkedin</a></li>
-			</ul>
-		</section>
-		<section class="footer-logo">
-			<a href="#"><img src="img/logo.png" alt="logo" width="110px"></a>
-		</section>
-	</footer>
+			</section>
+			<section class="footer-logo">
+				<a href="#"><img src="img/logo.png" alt="logo" width="110px"></a>
+			</section>
+		</footer>
 	</div>
 </body>
 </html>
